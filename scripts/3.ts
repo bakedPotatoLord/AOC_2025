@@ -35,4 +35,4 @@ for (let line of raw) {
   acc += n
 }
 
-console.log("done", acc) 
+console.log("part 2:", acc) 
