@@ -14,6 +14,7 @@
     "tsx": "^4.19.2"
   },
   "scripts":{
-    "start": "./start.sh"
+    "start": "./start.sh",
+    "initDay": "./init.sh"
   }
 }
