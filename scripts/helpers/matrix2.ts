@@ -3,9 +3,9 @@ import { v2 } from "./other";
 
 
 export default class Matrix2<T> extends Array<Array<T>> {
-  height: number;
-  width: number;
-  private mx:T[][];
+  readonly height: number;
+  readonly width: number;
+  readonly mx:T[][];
 
   constructor(mx:T[][] ) {
     super(mx.length);
