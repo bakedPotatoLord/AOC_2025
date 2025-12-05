@@ -3,8 +3,8 @@ import { v2 } from "./other";
 
 
 export default class Matrix2<T> extends Array<Array<T>> {
-  private height: number;
-  private width: number;
+  height: number;
+  width: number;
   private mx:T[][];
 
   constructor(mx:T[][] ) {
