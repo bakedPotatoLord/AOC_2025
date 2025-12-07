@@ -8,7 +8,7 @@ export function numberSum(arr:number[]){
 
 export async function getInput(day:number){
   if(day === 0) throw new Error("No input for day 0")
-  return await fs.readFile(`inputs/${day}.txt`,{encoding:"utf8"})
+  return (await import(`../../inputs/${day}.txt`,{with: { type: "text/plain" }})).default
 }
 
 export function abs(n:number){
