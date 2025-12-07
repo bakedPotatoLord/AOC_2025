@@ -7,11 +7,18 @@ My solutions to the Advent of Code competition for the 2024 year
 bun install
 ```
 
-### To run:
+### To create a new day from template:
 
 ```bash
-bun scripts/[day].ts
+bun run initDay <day>
 ```
+
+### To run a day:
+
+```bash
+bun start <day>
+```
+
 
 ### Debug in VSCode requires
 - nodejs
