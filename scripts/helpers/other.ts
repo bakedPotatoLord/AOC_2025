@@ -8,7 +8,7 @@ export function numberSum(arr:number[]){
 
 export async function getInput(day:number){
   if(day === 0) throw new Error("No input for day 0")
-  return (await import(`../../inputs/${day}.txt`,{with: { type: "text/plain" }})).default
+  return <string>(await import(`../../inputs/${day}.txt`,{with: { type: "text/plain" }})).default
 }
 
 export function abs(n:number){
@@ -62,3 +62,12 @@ export function convertSign(char: string) {
 export function v2(x:number|string,y:number|string){
   return new vec2(x,y)
 }
+
+declare global {
+  interface Array<T> {
+    hash(): string;
+  }
+}
+
+Array.prototype.hash= function (){ return this.join(",") }
+
