@@ -9,11 +9,13 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@lgs-code/2d-geometry": "^1.1.0",
     "logic-solver": "^2.0.1",
     "mathjs": "^14.0.1",
+    "polygon-intersection": "^2.0.1",
     "tsx": "^4.19.2"
   },
-  "scripts":{
+  "scripts": {
     "start": "./start.sh",
     "initDay": "./init.sh"
   }

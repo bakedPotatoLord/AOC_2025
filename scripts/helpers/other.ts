@@ -66,8 +66,12 @@ export function v2(x:number|string,y:number|string){
 declare global {
   interface Array<T> {
     hash(): string;
+    fromHash(s: string): T[]
   }
 }
 
 Array.prototype.hash= function (){ return this.join(",") }
 
+Array.prototype.fromHash = function (s: string) {
+  return s.split(",").map(Number)
+}
