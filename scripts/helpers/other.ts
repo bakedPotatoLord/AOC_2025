@@ -67,6 +67,7 @@ declare global {
   interface Array<T> {
     hash(): string;
     fromHash(s: string): T[]
+    contains(other:T[]): boolean
   }
 }
 
@@ -74,4 +75,8 @@ Array.prototype.hash= function (){ return this.join(",") }
 
 Array.prototype.fromHash = function (s: string) {
   return s.split(",").map(Number)
+}
+
+Array.prototype.contains = function(other){
+  return other.every(v => this.includes(v));
 }
