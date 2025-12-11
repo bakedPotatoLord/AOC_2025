@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@lgs-code/2d-geometry": "^1.1.0",
+    "@uandi/javascript-lp-solver": "^0.4.5",
     "logic-solver": "^2.0.1",
     "mathjs": "^14.0.1",
     "polygon-intersection": "^2.0.1",
