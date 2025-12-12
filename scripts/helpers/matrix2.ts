@@ -1,5 +1,5 @@
-import type vec2 from "./vec2";
-import { v2 } from "./other";
+import type vec2 from "./vec2.ts";
+import { v2 } from "./other.ts";
 
 
 export default class Matrix2<T> extends Array<Array<T>> {
@@ -41,5 +41,24 @@ export default class Matrix2<T> extends Array<Array<T>> {
       acc += row.join("")+"\n"
     }
     return acc
+  }
+
+  rotate90(){
+    for(let i = 0;i<this.height;i++){
+      for(let j = i;j<this.width;j++){
+        let temp = this.mx[i][j]
+        this.mx[i][j] = this.mx[j][i]
+        this.mx[j][i] = temp
+      }
+    }
+    this.mx.reverse()
+  }
+
+  forIndices(f:(i:number,j:number)=>void){
+    for(let i = 0;i<this.height;i++){
+      for(let j = 0;j<this.width;j++){
+        f(i,j)
+      }
+    }
   }
 }
