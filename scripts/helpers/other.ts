@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 
-import vec2 from './vec2'
+import vec2 from './vec2.ts'
 
 export function numberSum(arr:number[]){
   return arr.reduce((a,b)=>a+b,0)
@@ -9,6 +9,11 @@ export function numberSum(arr:number[]){
 export async function getInput(day:number){
   if(day === 0) throw new Error("No input for day 0")
   return <string>(await import(`../../inputs/${day}.txt`,{with: { type: "text/plain" }})).default
+}
+
+export async function getInputFs(day:number){
+  if(day === 0) throw new Error("No input for day 0")
+  return (await fs.readFile(`./inputs/${day}.txt`,"utf-8"))
 }
 
 export function abs(n:number){
